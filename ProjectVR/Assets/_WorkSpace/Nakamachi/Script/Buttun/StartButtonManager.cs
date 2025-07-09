@@ -3,13 +3,16 @@ using UnityEngine.SceneManagement; //ƒV[ƒ“‚ÌŠÇ—(Ø‚è‘Ö‚¦‚È‚Ç)‚ğs‚¤‚½‚ß‚Ì–¼‘O‹
 
 public class StartButtonManager : MonoBehaviour
 {
-    //ƒCƒ“ƒXƒyƒNƒ^[ã‚Å
+    //ƒCƒ“ƒXƒyƒNƒ^[ã‚Åİ’è‰Â”\‚ÈŸ‚ÌƒV[ƒ“–¼
     [SerializeField] private string NextSceneName = "StageSelectScene";
 
+    //ƒXƒ^[ƒgƒ{ƒ^ƒ“‚ª‰Ÿ‚³‚ê‚½‚Æ‚«‚ÉŒÄ‚Ño‚³‚ê‚éŠÖ”
     public void OnStartButtonPressed()
     {
+        //Ÿ‚ÌƒV[ƒ“–¼‚ª‹ó‚Å‚È‚¢‚©Šm”F(null‚Ü‚½‚Í‹ó•¶š—ñ‚Å‚È‚¢‚©)
         if(!string.IsNullOrEmpty(NextSceneName))
         {
+            //w’è‚³‚ê‚½–¼‘O‚ÌƒV[ƒ“‚ÉØ‚è‘Ö‚¦‚é
             SceneManager.LoadScene(NextSceneName);
         }
         else
