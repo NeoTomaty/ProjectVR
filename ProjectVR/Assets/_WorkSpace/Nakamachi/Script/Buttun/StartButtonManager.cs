@@ -1,3 +1,10 @@
+//StartButtonManager.cs
+//作成者:中町雷我
+//最終更新日:2025/07/31
+//アタッチ:Startボタンにアタッチ
+//[Log]
+//07/31　中町　Startボタンを押したらステージセレクトシーンにシーン遷移する処理
+
 using UnityEngine; //Unityの基本的な機能を使用するための名前空間
 using UnityEngine.SceneManagement; //シーンの管理(切り替えなど)を行うための名前空間
 
@@ -17,6 +24,7 @@ public class StartButtonManager : MonoBehaviour
         }
         else
         {
+            //シーン名が設定されていないときは警告を表示(デバッグ用)
             Debug.LogWarning("次のシーン名が設定されていません！");
         }
     }
