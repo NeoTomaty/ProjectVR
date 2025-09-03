@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 1493011049}
   - component: {fileID: 1493011052}
   m_Layer: 5
-  m_Name: Start
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5418fa2856a3c84f8ecf96d64a0e3e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextSceneName: StageSelectScene
+  NextSceneName: TitleScene
 --- !u!1 &1519729626
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +681,7 @@ GameObject:
   - component: {fileID: 1519729629}
   - component: {fileID: 1519729628}
   m_Layer: 5
-  m_Name: Title
+  m_Name: GameClear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title
+  m_text: GameClear
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Title
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
