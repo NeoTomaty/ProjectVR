@@ -4,6 +4,11 @@ using UnityEngine;
 public static class ansower
 {
     public static int score = 0;
+    public static string text = "君の得点は最高点だけど";
+    public static string text2 = "評定はないと思ってね";
+
+
+    public static bool isHorimoto=false;
 }
 public class StruckOutManager : MonoBehaviour
 {
@@ -72,7 +77,8 @@ public class StruckOutManager : MonoBehaviour
                 
                 break;
             case "Human":
-                setScore(100);
+                horimoto();
+               // setScore(100);
                 
                 break;
         }
@@ -94,5 +100,10 @@ public class StruckOutManager : MonoBehaviour
     public int GetScore()
     {
         return ansower.score; // 参照用
+    }
+    void horimoto()
+    {
+        setScore(1000);
+        ansower.isHorimoto = true;
     }
 }
