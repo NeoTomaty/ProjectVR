@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI; // CanvasのTextを扱う場合
 
-public class ThroughRing : MonoBehaviour
+public class PassRing : MonoBehaviour
 {
     // 投げるオブジェクトに付けたタグ名
     [SerializeField] private string targetTag = "Throwable";
@@ -9,8 +9,9 @@ public class ThroughRing : MonoBehaviour
     // UI管理オブジェクト
     [SerializeField] private RingUIManager ringUIManager;
 
-    [Header("輪っかを通過した際の出現テキスト")]
-    [SerializeField] private Text successText;
+    // シーン遷移管理オブジェクト
+    [SerializeField] private SceneChanger sceneChanger;
+
 
 
     // トリガーに入った瞬間に呼ばれる
@@ -21,11 +22,12 @@ public class ThroughRing : MonoBehaviour
         {
             Debug.Log("輪っかを通過しました！");
 
+
             // 親オブジェクトを削除
             if (transform.parent != null)
             {
-                Destroy(transform.parent.gameObject);
                 ringUIManager.RingPassed();
+                Destroy(transform.parent.gameObject);
             }
             else
             {
@@ -34,14 +36,5 @@ public class ThroughRing : MonoBehaviour
             }
         }
 
-        // Canvasのテキストを表示
-        if (successText != null)
-        {
-            successText.gameObject.SetActive(true); // 表示
-        }
-        else
-        {
-            Debug.Log("参照テキストが指定されていません！");
-        }
     }
 }
