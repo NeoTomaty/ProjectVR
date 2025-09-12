@@ -13510,7 +13510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ringCountText: {fileID: 59665947}
-  totalRings: 1
+  totalRings: 6
   sceneChanger: {fileID: 582504649}
   successText: {fileID: 1802035661}
 --- !u!1 &688450439

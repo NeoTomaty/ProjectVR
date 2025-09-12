@@ -28,16 +28,16 @@ public class PaperPlaneGrabHandler : MonoBehaviour
 
     private void OnRelease(SelectExitEventArgs args)
     {
-        Debug.Log("紙飛行機を離した！");
+        //Debug.Log("紙飛行機を離した！");
 
-        // カメラ切り替え処理
-        if (chaseCamera != null) chaseCamera.enabled = true;
+        //// カメラ切り替え処理
+        //if (chaseCamera != null) chaseCamera.enabled = true;
 
-        Debug.Log("subcameraを追加しました");
+        //Debug.Log("subcameraを追加しました");
 
-        if (mainCamera != null) mainCamera.enabled = false;
+        //if (mainCamera != null) mainCamera.enabled = false;
 
-        Debug.Log("maincameraを削除しました");
+        //Debug.Log("maincameraを削除しました");
 
     }
 }
