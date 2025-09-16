@@ -6,13 +6,15 @@ public static class ansower
     public static int score = 0;
     public static string text = "君の得点は最高点だけど";
     public static string text2 = "評定はないと思ってね";
+    public static string text3 = "By堀本";
+
 
 
     public static bool isHorimoto=false;
 }
 public class StruckOutManager : MonoBehaviour
 {
-    public bool isCollided;
+    public bool isCollided=true;
     int score = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,56 +36,62 @@ public class StruckOutManager : MonoBehaviour
 
     void HandleHitboxCollision(GameObject child, string type, Collision collision)
     {
-        switch (type)
+        if (collision.gameObject.CompareTag("Throwable"))
         {
-            case "Frame":
-                setScore(0);
-               
-                break;
-            case "1":
-                setScore(1);
-                
-                break;
-            case "2":
-                setScore(2);
-               
-                break;
-            case "3":
-                setScore(3);
-                
-                break;
-            case "4":
-                setScore(4);
-               
-                break;
-            case "5":
-                setScore(5);
-               
-                break;
-            case "6":
-                setScore(6);
-               
-                break;
-            case "7":
-                setScore(7);
-                
-                break;
-            case "8":
-                setScore(8);
-                
-                break;
-            case "9":
-                setScore(9);
-                
-                break;
-            case "Human":
-                horimoto();
-               // setScore(100);
-                
-                break;
+            Debug.Log("紙飛行機と当たった");
+            switch (type)
+            {
+                case "Frame":
+                    setScore(0);
+
+                    break;
+                case "1":
+                    setScore(1);
+
+                    break;
+                case "2":
+                    setScore(2);
+
+                    break;
+                case "3":
+                    setScore(3);
+
+                    break;
+                case "4":
+                    setScore(4);
+
+                    break;
+                case "5":
+                    setScore(5);
+
+                    break;
+                case "6":
+                    setScore(6);
+
+                    break;
+                case "7":
+                    setScore(7);
+
+                    break;
+                case "8":
+                    setScore(8);
+
+                    break;
+                case "9":
+                    setScore(9);
+
+                    break;
+                case "Human":
+                    horimoto();
+
+
+                    break;
+            }
+            isCollided = true;
+            GetScore();
         }
-        isCollided = true;
-        GetScore();
+        
+        
     }
 
     void HandleHitboxTrigger(GameObject child, string type, Collider other)
@@ -105,5 +113,6 @@ public class StruckOutManager : MonoBehaviour
     {
         setScore(1000);
         ansower.isHorimoto = true;
+        Debug.Log("堀本先生に当たった");
     }
 }

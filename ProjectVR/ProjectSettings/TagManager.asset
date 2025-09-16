@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Anchor
   - Throwable
+  - target
+  - Plane
   layers:
   - Default
   - TransparentFX

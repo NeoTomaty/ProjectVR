@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3980958f12f94649b134fc337b3d4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextSceneName: Stage2
+  NextSceneName: NakahamaBasicScene
 --- !u!1 &913480669
 GameObject:
   m_ObjectHideFlags: 0
