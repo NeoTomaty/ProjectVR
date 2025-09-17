@@ -16,19 +16,10 @@ EditorBuildSettings:
     guid: 9fb43c5693d96f640a02627cd232b657
   - enabled: 1
     path: Assets/_Project/Stage2.unity
-    guid: 8ab7a88944b8c7642b3e784c7afae4e8
+    guid: 2c070fd8ae4ffbe4abe3b56ee550f31f
   - enabled: 1
-    path: Assets/_Project/ResultScene.unity
-    guid: 612e1abfcf0fa214eb7a8c0660b1d45c
-  - enabled: 0
-    path: Assets/_WorkSpace/Nakahama/result.unity
-    guid: 536fb73ee67d4e942b81f48abd86049f
-  - enabled: 1
-    path: Assets/_WorkSpace/Nakahama/reult.unity
-    guid: 4452acd52619baf45954e05620b50901
-  - enabled: 1
-    path: Assets/_WorkSpace/Nakahama/NakahamaBasicScene.unity
-    guid: b6c45cad10411644d9318f6d1df66356
+    path: Assets/_Project/Stage2Result.unity
+    guid: 35fbea933ded9cc4aa18d70888a8096e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}

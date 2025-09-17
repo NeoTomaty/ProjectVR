@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
         if (remaining == 0)
         {
             resultscorehold.SetResultScore = ansower.score;
-            SceneManager.LoadScene("reult");
+            SceneManager.LoadScene("Stage2Result");
         }
 
     }

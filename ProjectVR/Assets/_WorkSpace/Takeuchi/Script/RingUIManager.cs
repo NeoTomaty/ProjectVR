@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;  // ← 追加
 
 public class RingUIManager : MonoBehaviour
 {
     [Header("カウントを表示するテキスト")]
-    [SerializeField] private Text ringCountText;
+    [SerializeField] private TextMeshPro ringCountText;  // ← Text ではなく TextMeshPro
 
     [Header("初期リング数")]
     [SerializeField] private int totalRings = 3;
@@ -13,7 +13,7 @@ public class RingUIManager : MonoBehaviour
     [SerializeField] private SceneChanger sceneChanger;
 
     [Header("輪っかを通過した際の出現テキスト")]
-    [SerializeField] private Text successText;
+    [SerializeField] private TextMeshPro successText;  // ← これも
 
     private int remainingRings;
 
@@ -23,7 +23,6 @@ public class RingUIManager : MonoBehaviour
         UpdateUI();
     }
 
-    // リング通過時に呼び出す
     public void RingPassed()
     {
         remainingRings--;
@@ -36,15 +35,13 @@ public class RingUIManager : MonoBehaviour
         {
             ringCountText.text = "Ring: " + Mathf.Max(remainingRings, 0);
 
-            // リングの数が０の場合
             if (remainingRings == 0)
             {
                 sceneChanger.SetCanChangeScene(true);
 
-                // Canvasのテキストを表示
                 if (successText != null)
                 {
-                    successText.gameObject.SetActive(true); // 表示
+                    successText.gameObject.SetActive(true);
                 }
                 else
                 {
